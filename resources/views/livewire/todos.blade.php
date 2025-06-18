@@ -2,7 +2,7 @@
     <form wire:submit="add">
         <input type="text" wire:model.live.change="todo">
 
-        <span>Curr: {{ $todo }}</span>
+        {{-- <span>Curr: {{ $todo }}</span> --}}
 
         <button type="submit">Add</button>
     </form>

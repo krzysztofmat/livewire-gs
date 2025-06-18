@@ -8,10 +8,7 @@ class Todos extends Component
 {
     public string $todo = '';
 
-    public array $todos = [
-        'take out trash',
-        'do dishes'
-    ];
+    public array $todos = [];
 
     public function add()
     {
@@ -19,6 +16,26 @@ class Todos extends Component
 
         // $this->todo = '';
         $this->reset('todo');
+    }
+
+    public function mount()
+    {
+        $this->todos = [
+            'take out trash',
+            'do dishes'
+        ];
+    }
+
+    // public function updated($property, $value)
+    // {
+    //     // dd($property, $value); 'todo' 'st you typed'
+    //     $this->$property = strtoupper($value);
+
+    // }
+
+    public function updatedTodo($value)
+    {
+        $this->todo = strtoupper($value);
     }
 
     public function render()
