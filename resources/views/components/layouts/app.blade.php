@@ -10,7 +10,8 @@
         <nav>
             <a href="/">Home</a>
             <a href="/todos" @class(['current' => request()->is('todos')])>Todos</a>
-            <a href="/counter"@class(['current' => request()->is('counter')])>Counter</a>
+            <a href="/counter" @class(['current' => request()->is('counter')])>Counter</a>
+            <a href="/show-posts" @class(['current' => request()->is('show-posts')])>Show Posts</a>
         </nav>
 
         {{ $slot }}
