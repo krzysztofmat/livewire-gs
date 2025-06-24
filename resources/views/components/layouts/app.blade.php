@@ -11,7 +11,8 @@
             <a href="/">Home</a>
             <a href="/todos" @class(['current' => request()->is('todos')])>Todos</a>
             <a href="/counter" @class(['current' => request()->is('counter')])>Counter</a>
-            <a href="/show-posts" @class(['current' => request()->is('show-posts')])>Show Posts</a>
+            <a href="/posts" @class(['current' => request()->is('posts')])>Posts</a>
+            <a href="/posts/create" @class(['current' => request()->is('posts/create')])>Create Post</a>
         </nav>
 
         {{ $slot }}
