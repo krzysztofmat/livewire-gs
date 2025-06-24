@@ -9,4 +9,10 @@ class Post extends Model
 {
     /** @use HasFactory<\Database\Factories\PostFactory> */
     use HasFactory;
+
+    public function archive()
+    {
+        $this->is_archived = true;
+        $this->save();
+    }
 }
